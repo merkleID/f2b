@@ -1,0 +1,8 @@
+[sshd]
+enabled = true
+ignoreip = 2.34.125.245, 127.0.0.1/8
+mode = aggressive
+bantime = 86400
+findtime = 86400
+maxretry = 1
+
