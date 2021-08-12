@@ -1,6 +1,6 @@
 [sshd]
 enabled = true
-ignoreip = 2.34.125.245, 127.0.0.1/8
+ignoreip = 1.2.3.4, 5.6.7.8, 127.0.0.1/8
 mode = aggressive
 bantime = 86400
 findtime = 86400
@@ -8,10 +8,9 @@ maxretry = 1
 
 [proxmox]
 enabled = true
-ignoreip = 2.34.125.245
+ignoreip = 1.2.3.4, 5.6.7.8
 port = https,http,8006
 filter = proxmox
 logpath = /var/log/daemon.log
 maxretry = 1
 bantime = 86400
-
