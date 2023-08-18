@@ -3,6 +3,9 @@ destemail = $my_destination_email
 sender = $my_sender_email
 mta = mail
 action = %(action_mwl)s
+banaction = iptables-multiport[blocktype=DROP]
+banaction_allports = iptables-allports[blocktype=DROP]
+
 
 [sshd]
 enabled = true
