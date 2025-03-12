@@ -23,7 +23,7 @@ filter = proxmox
 backend = systemd
 maxretry = 1
 findtime = 2d
-bantime = 8h
+bantime = 24h
 mode = aggressive
 
 [nextcloud]
