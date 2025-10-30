@@ -14,7 +14,8 @@ mode = aggressive
 bantime = 86400
 findtime = 86400
 maxretry = 1
-backend = systemd 
+backend = systemd
+journalmatch = _SYSTEMD_UNIT=ssh.service
 
 [proxmox]
 enabled = true
@@ -37,3 +38,15 @@ maxretry = 2
 bantime = 86400
 findtime = 86400
 logpath = /var/snap/nextcloud/current/logs/nextcloud.log
+
+[sshd-invalidproto]
+enabled  = true
+filter   = sshd-invalidproto
+port     = ssh
+maxretry = 1
+findtime = 3600
+bantime  = 86400
+backend = systemd
+journalmatch = _SYSTEMD_UNIT=ssh.service
+action = %(action_)s
+
